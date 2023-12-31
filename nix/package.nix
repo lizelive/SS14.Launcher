@@ -6,6 +6,7 @@
 , iconConvTools
 , copyDesktopItems
 , makeDesktopItem
+, libcef
 , libX11
 , libICE
 , libSM
@@ -110,7 +111,8 @@ buildDotnetModule rec {
     fontconfig
     glew
 
-    # TODO: Figure out dependencies for CEF support.
+    # cef
+    libcef
   ];
 
   makeWrapperArgs = [ ''--set ROBUST_SOUNDFONT_OVERRIDE "${soundfont-path}"'' ];
